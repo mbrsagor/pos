@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Add new Invoice {% endblock %}
+
+{% block content %}
+
+    <section class="content-header">
+        <h1> Dashboard <small>Add new Invoice</small></h1>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'dashboard' %}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Category</li>
+        </ol>
+    </section>
+
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="box-title">Add New Invoice</h3>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a title="Category list" data-toggle="tooltip" data-placement="left"
+                                   class="btn btn-info btn-sm" href="{% url 'category_list' %}">
+                                    <i class="fa fa-list"></i>
+                                </a>
+                            </div>
+                        </div>
+                        {% include 'common/message.html' %}
+                    </div>
+                    <div class="box-body">
+                        <h2>Invocie views test for development</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
