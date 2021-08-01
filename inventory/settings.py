@@ -124,8 +124,9 @@ MESSAGE_TAGS = {
     messages.WARNING: 'WARNING'
 }
 
+# User login and redirect
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'login'
 
-
+# Cart session
 CART_SESSION_ID = 'cart'
