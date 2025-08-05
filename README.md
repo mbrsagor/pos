@@ -19,7 +19,7 @@
  
  POS:
  - Product Sales
- - List of sale record
+ - List of sale records
  - Invoice 
 
 ## Setup & dependencies
@@ -28,10 +28,7 @@
 - Django 3.1.2
 - Postgres 12.5
 
-The following steps will walk you thru installation on a Mac. Linux should be similar.
-It's also possible to develop on a Windows machine, but I have not documented the steps.
-If you've developed django apps on Windows, you should have little problem getting
-up and running.
+The steps below guide you through installation on macOS. The process for Linux should be quite similar. While it's also possible to develop on Windows, those steps aren't covered here. If you've previously worked with Django on Windows, you should be able to get set up without much trouble.
 
 
 ### Create Database
@@ -50,7 +47,7 @@ CREATE EXTENSION postgis;
 
 ### Setup Django Server (Mac)
 
-We're using python3 instead of python2.x. If you don't have python3 installed,
+We're using Python instead of python2.x. If you don't have Python installed,
 install [Homebrew](http://brew.sh), then…
 
 ```
@@ -59,7 +56,7 @@ brew install python3.8
 
 Assuming you've cloned the repository, open Terminal and `cd ~/your/path/to/inventory`.
 
-Create a python virtual environment:
+Create a Python virtual environment:
 
 ```bash
 virtualenv venv --python=python3.8
@@ -71,7 +68,7 @@ Activate it:
 source env/bin/activate
 ```
 
-Install the python dependencies which includes django and other libraries.
+Install the Python dependencies, which include Django and other libraries.
 
 ```
 pip3 install -r requirements.txt
