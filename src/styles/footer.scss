@@ -1,0 +1,7 @@
+@use './style' as *;
+
+.footer {
+    background-color: var(--white_color);
+    border-top: 1px solid var(--header_border_color);
+  }
+  

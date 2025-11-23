@@ -1,0 +1,73 @@
+.profile-settings {
+    padding: 2rem;
+  
+    .tab-sidebar {
+      background: var(--white_color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid var(--header_border_color);
+  
+      .nav-item {
+        padding: 0.4rem 1rem;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        color: var(--tab_font_color);
+        display: flex;
+        align-items: center;
+  
+        svg {
+          margin-right: 8px;
+        }
+  
+        &.active {
+          background-color: var(--nav_border_color);
+          color: var(--white_color);;
+          font-weight: 600;
+        }
+  
+        &:hover {
+          background-color: var(--header_border_color);
+        }
+      }
+    }
+  
+    .tab-content {
+      background: var(--white_color);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--input-border-color);
+  
+      h4 {
+        margin-bottom: 1rem;
+      }
+  
+      .form-control {
+        border-radius: 6px;
+      }
+  
+      button.btn {
+        border-radius: 6px;
+      }
+    }
+  }
+
+.update_profile_sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    
+    button.btn {
+        align-self: flex-start;
+        background-color: var(--primary_color);
+        color: var(--white_color);
+        border-radius: 6px;
+        padding: 0.5rem 1rem;
+        border: none;
+    
+        &:hover {
+        background-color: var(--primary_color_hover);
+        }
+    }
+}

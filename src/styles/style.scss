@@ -1,0 +1,203 @@
+@use './themes/light';
+@use './themes/dark';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--base-font-color);
+  font-size: 15px;
+  background-color: var(--base-bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Default Styles customization
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--input-border-color);
+  }
+
+
+// Bootstrap Card Overrides
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border: 1px solid var(--card-border) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+.table {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border: 1px solid var(--card-border) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  thead, tbody, tr, th, td {
+    background-color: var(--card-bg) !important;
+    color: var(--card-text) !important;
+    border-color: var(--card-border) !important;
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  tr:hover {
+    background-color: var(--tab_font_color); // slightly lighter for dark theme
+  }
+  svg {
+      color: var(--white_color) !important;
+  }
+}
+
+
+/* Chrome, Safari, Edge */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.form-control::placeholder {
+  color: var(--base-font-color); // light mode placeholder
+}
+
+.dark input.form-control::placeholder {
+  color: var(--white_color) // dark mode placeholder
+}
+
+input, textarea, select {
+  background-color: var(--input-bg) !important;
+  color: var(--input-color) !important;
+  border: 1px solid var(--input-border) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--auth_btn_bg_color) !important;
+  border-color: var(--nav_border_color) !important;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+}
+  
+.main-content {
+  flex-grow: 1;
+  background-color: var(--main-content-bg-color);
+  transition: margin-left 0.3s ease;
+}
+
+// .main-content.expanded {
+//   margin-left: 70px;
+// }
+
+.brand-text {
+  a {
+    color: var(--base-font-color);
+  }
+}
+
+// Default SVG color
+svg {
+  color: var(--base-font-color) !important;
+  transition: color 0.3s ease;
+}
+
+// Page title header
+.pageTitleContainer {
+  background-color: var(--sidebar_bg_color);
+  border: 1px solid var(--header_border_color);
+  border-top: none;
+  padding: 15px;
+  h2 {
+    font-size: 20px;
+  }
+  a {
+    color: (--base_font_color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      color: var(--nav_border_color);
+    }
+  }
+  svg {
+    margin-left: 5px;
+  }
+}
+
+// Custom service details
+.custom_service_details {
+  max-width: 690px;
+}
+
+.align_right {
+  text-align: right;
+}
+
+// Company
+.company_popup_modal {
+  display: block;
+  z-index: 9999999;
+  padding-right: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .modal-title {
+    color: var(--base-font-color);
+    font-size: 15px !important;
+  }
+  .company_popup_modal_dialog {
+    max-width: 500px !important;
+  }
+}
+
+.company_form_gap {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rating_ui_table {
+  svg {
+    color: var(--card-text) !important;
+  }
+}
+
+// Add new button right side
+.align_right {
+  button {
+    svg {
+      color: var(--white_color) !important;
+    }
+  }
+}
+
+.create_user_show_pass {
+  right: 10px;
+  top: 30px;
+}
+
+// onboardingForm
+.onboardingForm {
+  .modal-title {
+    font-size: 16px !important;
+  }
+}
+
+// Custom service details responsive
+@media (max-width: 768px) {
+  .custom_service_details {
+    max-width: 100%;
+  }
+}

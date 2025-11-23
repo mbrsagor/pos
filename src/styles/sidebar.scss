@@ -1,0 +1,141 @@
+.sidebar {
+  width: 250px;
+  background-color: var(--sidebar_bg_color);
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  position: relative;
+  height: 100vh;
+
+  .brand-name {
+    padding: 0 15px;
+
+    .brand-text {
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-icon {
+        margin-top: -3px;
+      }
+
+      .logo-text {
+        margin-left: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .nav-link {
+    color: var(--base-font-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    span {
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.active {
+      background-color: var(--nav_active_color);
+      border-right: 2px solid var(--nav_border_color);
+      color: var(--nav_active_text_color);
+    }
+
+    &:hover {
+      background-color: var(--nav_hover_color);
+    }
+  }
+
+  .submenu {
+    padding-left: 15px;
+    animation: fadeIn 0.3s ease;
+
+    li {
+      list-style: none;
+
+      .nav-link.sub {
+        padding: 8px 15px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--base-font-color);
+        background: none;
+
+        &.active {
+          background-color: var(--nav_active_color);
+          border-left: 2px solid var(--nav_border_color);
+        }
+
+        &:hover {
+          background-color: var(--nav_hover_color);
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    display: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive behavior for mobile/tablet */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--sidebar_bg_color);
+    z-index: 1051;
+
+    &.collapsed {
+      left: -250px; /* hidden by default */
+    }
+
+    &:not(.collapsed) {
+      left: 0; /* visible when open */
+    }
+  }
+
+  /* Add blur overlay when sidebar is open */
+  body.sidebar-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    z-index: 1040;
+  }
+}

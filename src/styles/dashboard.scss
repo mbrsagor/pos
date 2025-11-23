@@ -1,0 +1,30 @@
+@use './style' as *;
+
+.dashboard_card {
+    .headline {
+        font-size: 17px;
+    }
+    .card_detail {
+        text-transform: capitalize;
+    }
+}
+
+@media (max-width: 768px) {
+  .dashboard-welcome-card {
+    h2 {
+        font-size: 16px;
+    }
+  }
+  .dashboard_card {
+        .card-title {
+            font-size: 16px;
+        }
+        .card_detail {
+            font-size: 14px;
+        }
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
