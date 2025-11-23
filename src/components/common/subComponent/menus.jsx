@@ -21,15 +21,15 @@ export default function Menus({ closeSidebar }) {
   // Auto-open menus based on current route
   useEffect(() => {
     if (
-      location.pathname.startsWith("/banners") ||
-      location.pathname === "/create-banner"
+      location.pathname.startsWith("/inventory") ||
+      location.pathname === "/create-inventory"
     ) {
       setBannerOpen(true);
     }
     if (
       location.pathname.startsWith("/categories") ||
-      location.pathname.startsWith("/foods") ||
-      location.pathname === "/create-food"
+      location.pathname.startsWith("/pos") ||
+      location.pathname === "/create-pos"
     ) {
       setFoodOpen(true);
     } else {
