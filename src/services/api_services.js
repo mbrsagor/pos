@@ -14,7 +14,7 @@ const API_URLS = {
 //     })();
       
 // export const BASE_URL = "http://127.0.0.1:8000"; // Default to development
-export const BASE_URL = "http://13.233.251.24:8080"; // Default to Staging
+export const BASE_URL = "http://13.127.95.188"; // Default to Staging
 
 export const apiURL = "/api/v1";
 export const endpoint = `${BASE_URL}${apiURL}`;

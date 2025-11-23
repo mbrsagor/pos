@@ -12,7 +12,7 @@ export default function AuthLayout({ children, ...props }) {
       <div className="auth_right">
         <div className="auth_form_wrapper">
           <div className="auth_header">
-            <h2 className="title">pos Admin</h2>
+            <h2 className="title">POS</h2>
             <p className="subtitle">{props.subtitle}</p>
           </div>
           <div className="auth_form_content">{children}</div>

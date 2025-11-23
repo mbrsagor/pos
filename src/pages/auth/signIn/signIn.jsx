@@ -125,7 +125,7 @@ export default function SignInPage() {
                 onClick={forgotPasswordHandler}
                 to="/sent-otp"
               >
-                Sign up to be a restaurant partner
+                Sign up to be a company partner
               </Link>
             </p>
           </div>
