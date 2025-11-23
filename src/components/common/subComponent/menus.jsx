@@ -84,7 +84,7 @@ export default function Menus({ closeSidebar }) {
             >
               <div>
                 <FeatherIcon icon="image" size={15} />
-                <span className="ms-2">Banner</span>
+                <span className="ms-2">POS</span>
               </div>
               <FeatherIcon
                 icon={bannerOpen ? "chevron-up" : "chevron-down"}
@@ -95,24 +95,24 @@ export default function Menus({ closeSidebar }) {
               <ul className="submenu ps-3">
                 <li>
                   <NavLink
-                    to="/banners"
+                    to="/inventory"
                     className={({ isActive }) =>
                       "nav-link sub" + (isActive ? " active" : "")
                     }
                     onClick={handleLinkClick}
                   >
-                    All Banner
+                    All Seals
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="/create-banner"
+                    to="/inventory"
                     className={({ isActive }) =>
                       "nav-link sub" + (isActive ? " active" : "")
                     }
                     onClick={handleLinkClick}
                   >
-                    Create Banner
+                    Inventory
                   </NavLink>
                 </li>
               </ul>
@@ -128,7 +128,7 @@ export default function Menus({ closeSidebar }) {
               >
                 <div>
                   <FeatherIcon icon="coffee" size={15} />
-                  <span className="ms-2">Food Items</span>
+                  <span className="ms-2">Items</span>
                 </div>
                 <FeatherIcon
                   icon={foodOpen ? "chevron-up" : "chevron-down"}
@@ -150,25 +150,25 @@ export default function Menus({ closeSidebar }) {
                   </li>
                   <li>
                     <NavLink
-                      to="/foods"
+                      to="/items"
                       className={({ isActive }) =>
                         "nav-link sub" + (isActive ? " active" : "")
                       }
                       onClick={handleLinkClick}
                     >
-                      All Food Items
+                      All Items
                     </NavLink>
                   </li>
 
                   <li>
                     <NavLink
-                      to="/create-food"
+                      to="/create-item"
                       className={({ isActive }) =>
                         "nav-link sub" + (isActive ? " active" : "")
                       }
                       onClick={handleLinkClick}
                     >
-                      Create Food Item
+                      Create Item
                     </NavLink>
                   </li>
                 </ul>
